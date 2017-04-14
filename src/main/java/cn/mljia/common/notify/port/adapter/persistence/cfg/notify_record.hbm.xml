@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field" default-cascade="all">
+	<class name="cn.mljia.common.notify.domain.NotifyRecord" table="tb_common_notify_record" lazy="true">
+
+		<id name="id" column="ID" type="long" unsaved-value="-1">
+			<generator class="native" />
+		</id>
+
+		<version name="concurrencyVersion" column="CONCURRENCY_VERSION"
+			type="int" />
+			
+		<property name="createTime" column="CREATE_TIME" type="timestamp"  />
+
+		<property name="editTime" column="EDIT_TIME" type="timestamp" />
+
+		<property name="notifyRule" column="NOTIFY_RULE" type="string" length="255"/>
+ 
+		<property name="notifyTimes" column="NOTIFY_TIMES" type="int" length="11"/>
+		
+		<property name="limitNotifyTimes" column="LIMIT_NOTIFY_TIMES" type="int" length="11" />
+		
+		<property name="url" column="URL" type="string" length="500"/>
+		
+		<property name="status" column="STATUS" type="string" length="50" />
+		
+		<property name="notifyType" column="NOTIFY_TYPE" type="string" length="30" />
+		
+		<property name="notifyId" column="NOTIFY_ID" type="string" length="32"/>
+		
+		<property name="notifyBody" column="NOTIFY_BODY" type="string" length="255"/>
+		 
+	</class>
+</hibernate-mapping>

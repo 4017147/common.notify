@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="mall.notify">
+        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="/src/main/webapp/WEB-INF/web.xml"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="cn.mljia.ddd.common-1.2.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cn.mljia.ddd.common/cn.mljia.ddd.common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/common.nofity/target/classes"/>
+        <property name="component.exclusion.patterns" value="%regex[WEB-INF/lib/(?!(.*?(interfaces|interface|disconf|msmq|service|utils|market|pay).*?)|cn.mljia|slf4j|log4j|dubbo).*.jar]"/>
+        <property name="context-root" value="common.notify"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field" default-cascade="all">
+	<class name="cn.mljia.common.notify.domain.NotifyRecordLog" table="tb_common_notify_record_log" lazy="true">
+
+		<id name="id" column="ID" type="long" unsaved-value="-1">
+			<generator class="native" />
+		</id>
+
+		<version name="concurrencyVersion" column="CONCURRENCY_VERSION"
+			type="int" />
+			
+		<property name="createTime" column="CREATE_TIME" type="timestamp"  />
+
+		<property name="editTime" column="EDIT_TIME" type="timestamp" />
+		
+		<property name="notifyId" column="NOTIFY_ID" type="string" length="32"/>
+
+		<property name="request" column="REQUEST" type="string" length="500"/>
+		
+		<property name="response" column="RESPONSE" type="string" length="1000" />
+		
+		<property name="httpStatus" column="HTTP_STATUS" type="int" length="50" />
+		
+		<property name="notifyBody" column="NOTIFY_BODY" type="string" length="255"/>
+		 
+	</class>
+</hibernate-mapping>
